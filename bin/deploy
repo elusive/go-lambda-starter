@@ -1,0 +1,9 @@
+#!/bin/bash
+
+make
+cd infrastructure
+terraform apply -auto-approve
+
+TF_URL="$(terraform output -raw url)"
+
+cd ../
